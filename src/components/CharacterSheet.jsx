@@ -54,7 +54,6 @@ const CharacterSheet = () => {
   useEffect(() => {
     if (isCharacterLoaded) {
       localStorage.setItem('owlbear-heart-character', JSON.stringify(character));
-      console.log("Character changed: ", JSON.stringify(character));
     }
   }, [character, isCharacterLoaded]);
 
