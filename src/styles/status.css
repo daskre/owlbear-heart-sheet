@@ -1,0 +1,89 @@
+/* status.css */
+
+.status-container {
+  display: grid;
+  grid-template-columns: auto repeat(15, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  grid-column: span 16;
+}
+
+.status-header label {
+  color: #a52a2a;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.resistance-item {
+  display: contents;
+}
+
+.resistance-label {
+  grid-column: span 1;
+  color: #a52a2a;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.stress-checkbox,
+.protection-checkbox {
+  display: none;
+}
+
+.stress-label,
+.protection-label {
+  margin: 0px;
+}
+
+.stress-label::before {
+  content: "";
+  font-size: 0.1em;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #a52a2a;
+  border-radius: 50%;
+  margin-right: 0;
+  vertical-align: middle;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.protection-label::before {
+  content: "";
+  font-size: 0.1em;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  margin-right: 0;
+  vertical-align: middle;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stress-checkbox:checked + .stress-label::before {
+  background-color: #a52a2a;
+  transform: scale(1.2);
+}
+
+.stress-checkbox:not(:checked) + .stress-label::before {
+  transform: scale(1);
+}
+
+.protection-checkbox:checked + .protection-label::before {
+  background-color: #000000;
+  transform: scale(1.2);
+}
+
+.protection-checkbox:not(:checked) + .protection-label::before {
+  transform: scale(1);
+}

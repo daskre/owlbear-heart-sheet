@@ -1,0 +1,90 @@
+/* list-components.css */
+
+.active-beats-header,
+.equipment-header,
+.resources-header,
+.skills-header,
+.domains-header,
+.fallout-header,
+.abilities-header,
+.notes-header {
+  display: flex;
+  align-items: center;
+}
+
+.active-beats-header label,
+.equipment-header label,
+.resources-header label,
+.skills-header label,
+.domains-header label,
+.fallout-header label,
+.abilities-header label,
+.notes-header label {
+  color: #a52a2a;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.checkbox-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-container label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 10px;
+  color: #000;
+  font-weight: normal;
+}
+
+.checkbox-container label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid #a52a2a;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label:before {
+  background-color: #a52a2a;
+}
+
+.beat-text,
+.equipment-text,
+.resources-text,
+.skills-text,
+.domains-text,
+.fallout-text,
+.abilities-text,
+.notes-text {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 2px 5px;
+  border: none;
+  border-bottom: 2px solid #a52a2a;
+  border-radius: 0;
+  background-color: #f8f8f8;
+  color: black;
+  font-size: 1em;
+  font-weight: normal;
+  transition: font-size 0.2s ease;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
